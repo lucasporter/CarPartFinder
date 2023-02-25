@@ -2,13 +2,6 @@
 
 *Adapted from Introduction to Programming using Python by Y. Daniel Liang, section 2.13*
 
-Assignments in this course are larger and more complex than in CS 1400.
-
-You will be given around two weeks per assignment (a.k.a. a *sprint*).  You are given this much time because I sincerely believe that you need all of it.
-
-You should spend more time *designing* your program than *writing* it.  It is perfectly normal to not write a single line of code during the first week of an assignment.  When you focus on designing a good solution before coding it, you encounter fewer bugs and experience less confusion.
-
-This table gives an idea of how you ought to spend your time:
 
 | Project Phase                | Portion of effort
 |------------------------------|------------------
@@ -20,11 +13,8 @@ This table gives an idea of how you ought to spend your time:
 |5. Maintenance                | ∞
 
 *   In a real world project, **Phase 5: Maintenance** completely dominates the others; it can last years or decades!
-    *   Obviously, you can't experience that in this short time we have together in this class.
 *   For best results, apply this advice over the whole two-week sprint.
     *   Do not expect a good outcome if you procrastinate and try to cram this in to one or two days.
-
-
 
 ## Phase 0: Requirements Analysis
 *(20% of your effort)*
@@ -44,16 +34,20 @@ Identify any non-trivial algorithms you will need to create to convert the input
 
 ### Deliverables
 
-*   [ ] Re-write the instructions in your own words.
-    *   If you don't do this, you won't know what you're supposed to do!
-    *   Don't leave out details!
 *   [ ] Explain the problem this program aims to solve.
     *   Describe what a *good* solution looks like.
+        *   A good execution would be a program that takes input from the user about what car they have and what part they are looking for and then returns the website/store that is selling it the cheapest and has the best reviews.    
     *   List what you already know how to do.
+        *   I already know how to get input from the user and store things in a database to then be displayed to the user. Finding out which item is the cheapest AND has the best reviews shouldnt be too hard either.    
     *   Point out any challenges that you can foresee.
+        *   The real challenge here is learning how to scrape specific information from the web and make sure that the information is correctly categorized and logged.    
 *   [ ] List all of the data that is used by the program, making note of where it comes from.
     *   Explain what form the output will take.
+        *   The output will be a graphical depiction of a picture of the part and a description of what it is and the installation difficulty. 
+        *   The output will also recommend the prodcut with the best reviews and the cheapest option.
 *   [ ] List the algorithms that will be used (but don't write them yet).
+    *   We will need an algorithm that converts the viewer rating into a standardized figure.
+    *   I need an algorithm that compares prices to reviews and outputs the best option.
 
 
 
@@ -123,9 +117,17 @@ Pseudocode is closer to plain English than it is to working Python code, and lac
 ### Deliverables
 
 *   [ ] Function signatures that include:
-    *   Descriptive names.
-    *   Parameter lists.
-    *   Documentation strings that explain its purpose and types of inputs and outputs.
+    *   Descriptive names, parameter lists, and documentation strings that explain its purpose and types of inputs and outputs.
+        *   Interface.py
+            *   homePage()
+                *  Initiates a welcome screen and asks the user for input about their vehicle details
+                *   Calls getVehicleInfo() from Data.py
+            *   vehicleCheck()
+                *   Checks the provided vehicle details against a database of car makes/models
+                *   If incorrect, produces an error message and returns to the home page for the user to try again
+            *   outputResults()
+                *   produces an output either to a file or directly to the terminal that details the results of the search which includes a description of the requested part, a 
+
 *   [ ] Pseudocode that captures how each function works.
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
 *   [ ] Explain what happens in the face of good and bad input.
