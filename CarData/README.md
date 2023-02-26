@@ -1,1 +1,1 @@
-this dir contains info on car makes and models 
+This is a .txt file split by commas that contains every car sold in america from 1926-2023 inclusive. only the year, make, and model are provided. it is sorted by year.
