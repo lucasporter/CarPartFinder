@@ -3,7 +3,7 @@ def getVehicleInfo():
     vehicleYear = input("Please enter your vehicle Year: ")
     vehicleMake = input("Please enter your vehicle Make: ")
     vehicleModel = input("Please enter your vehicle Model: ")
-
+    return vehicleYear, vehicleMake, vehicleModel
 def getPartInfo():
     requestedPart = input("What part are you looking for today: ")
 
@@ -20,22 +20,5 @@ def getCarData():
         string = cleanCarInfo[i]
         newstring = string.split(',')
         cleanCarInfo[i] = newstring
-
-    print(len(cleanCarInfo))
-    print(cleanCarInfo[0:25])
-  #  CarMMY = cleanCarInfo.split("\n")
-  # CarMMY = [x[0].split(',') for x in cleanCarInfo]
-
-
-    
-    
-    
-        
-        
-            
-
-
-    
-
-getCarData()  
-
+    cleanCarInfo.pop(11442)
+    return cleanCarInfo 
