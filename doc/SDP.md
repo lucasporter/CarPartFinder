@@ -126,7 +126,7 @@ Pseudocode is closer to plain English than it is to working Python code, and lac
                 *   Checks the provided vehicle details against a database of car makes/models
                 *   If incorrect, produces an error message and returns to the home page for the user to try again
             *   outputResults()
-                *   produces an output either to a file or directly to the terminal that details the results of the search which includes a description of the requested part, a 
+                *   produces an output either to a file or directly to the terminal that details the results of the search which includes a description of the requested part, which brand has the best reviews and which place has the cheapest price. 
 
 *   [ ] Pseudocode that captures how each function works.
     *   Pseudocode != source code.  Do not paste your finished source code into this part of the plan.
